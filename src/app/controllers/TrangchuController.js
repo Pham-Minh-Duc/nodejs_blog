@@ -1,14 +1,14 @@
 class TrangchuController {
 
-    //[GET] /news
+    //[GET] /trang-chu
     index(req, res){
         res.render('trang-chu')
     }
 
 
-    //[GET] /news/:slug
-    show(req, res) {
-        res.send('News details')
+    //[GET] /trang-chu/:slug
+    title(req, res) {
+        res.send('Đây là trang chủ')
     }
 }
 
