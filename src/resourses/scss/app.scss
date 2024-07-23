@@ -1,0 +1,507 @@
+@import 'variables';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family:"Philosopher", sans-serif;
+    font-weight: 250;
+  }
+  #main {
+    position: relative;
+  }
+  :root{
+    --line-height-25: 25px;
+    --mt-10: 10px;
+  }
+  /* a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  } */
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #d09441;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+  }
+  img#logo {
+    height: 100px;
+    width: 100px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+  }
+  #nav {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+  }
+  #nav li {
+    display: inline-block;
+  }
+  #nav > li {
+    display: inline-block;
+    margin: 10px;
+    padding: 25px 5px;
+  }
+  #nav li a {
+    font-family: "Arimo", sans-serif;
+    text-decoration: none;
+    color: black;
+  }
+  #nav li:hover a {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+  }
+  #nav li button {
+    color: black;
+    border: none;
+    padding: 11px 30px;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+  
+  }
+  #slider {
+    position: absolute;
+    top: 0px;
+    background: url(/img/img/slider.jpg) top center / cover no-repeat;
+    width: 100%;
+    height: 680px;
+    z-index: 0;
+  }
+  #sub-slider {
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+  }
+  
+  #sub-slider > #shadow{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    background: linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, rgba(2, 17, 27, 1) 100%);
+    height: 600px;
+    width: 100%;
+    z-index: 1;
+    animation-duration: 1.5s;
+    animation-name: slide;
+  }   
+  @-webkit-keyframes slide {
+    from{
+      top: 850px;
+    }
+    to{
+      top: 10px;
+    }
+  }
+  #sub-slider > #shadow > .content {
+    padding-bottom: 20px;
+    color: #fff;
+    width: 650px;
+    margin-left: 80px;
+    margin-top: 100px;
+  }
+  
+  #sub-slider > #shadow > .content > h1 {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-size: 85px;
+  }
+  #sub-slider > #shadow > .content > h5 {
+    font-family: "Arimo", sans-serif;
+    font-weight: 150;
+    font-style: italic;
+    padding-bottom: 20px;
+    font-size: 24px;
+  }
+  #sub-slider > #shadow > .content > p{
+    font-family: "Arimo", sans-serif;
+    font-weight: 50;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  #sub-slider > #shadow > .content > button {
+    color: white;
+    border: 1px solid white;
+    padding: 13px 40px;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 20px;
+  }
+  #main-content{
+    position: absolute;
+    top: 750px;
+    width: 100%;
+  }
+  #main-content #section .member-items{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 500px;
+      margin: 50px;
+      padding: 40px;
+  }
+  #main-content #section #menu {
+    background: url(/img/img/menu.jpg);
+  }
+  #main-content #section #reservation {
+    background: url(/img/img/reservation.jpg);
+    font-family: "Philosopher", sans-serif;
+    font-weight: 200;
+  }
+  #main-content  #section{
+   display: flex;
+   height: 600px;
+   justify-content: space-around;
+  }
+  #section .member-items h1{
+    font-family: "Philosopher", sans-serif;
+    color: #fff;
+    margin-bottom: 24px;
+    font-size: 35px;
+    font-weight: 100;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 10px;
+    border-radius: 30% 5%;
+  }
+  #section .member-items a{
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  #section .member-items button{
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    padding: 13px 40px;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 40%;
+    font-family: "Philosopher", sans-serif;
+    font-size: 16px;
+    transition: all 0.4s;
+  }
+  #section .member-items button:hover{
+    background-color: #a5a4a4;
+  }
+  .animation{
+    transition: all 1s;
+    transform: translate3d(-50px, 0, 0);
+  }
+  
+  .animation.active{
+    transform: translate3d(0, 0, 0);
+  }
+  .big-ctn{
+    position: absolute;
+    top: 1380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    height: 600px;
+    width: 100%;
+    /* z-index: 1; */
+    /* margin-bottom: 100px; */
+  }
+  
+  
+  
+  .comment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    /* border: solid black 0.5px; */
+    /* height: 700px; */
+    /* background: #F1F4FD; */
+  }
+  
+  #container{
+    max-width: 1150px;
+    width: 95%;
+  }
+  
+  #slider-wrapper{
+    position: relative;
+  }
+  #slider-wrapper .slide-button{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    color: #fff;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%; 
+    border: none;
+    outline: none;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  
+  #slider-wrapper .slide-button:hover{
+    background: #444;
+  }
+  
+  #slider-wrapper .slide-button#prev-slide{
+    left: -20px;
+  }
+  #slider-wrapper .slide-button#next-slide{
+    right: -20px;
+  }
+  
+  
+  #slider-wrapper #image-list {
+    /* display: none; */
+    display: grid;
+    gap: 18px;
+    font-size: 10;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  #slider-wrapper #image-list::-webkit-scrollbar{
+    display: none;
+  }
+  
+  #slider-wrapper #image-list .image-item {
+    position: relative;
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  #container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-scrollbar .scrollbar-track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  
+  }
+  
+  .slider-scrollbar .scrollbar-thumb.scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  
+  
+  
+  .feedback-fill{
+    position: absolute;
+    top: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    border-radius: 30% 60%;
+    background-color: #d09441;
+  }
+  .feedback-fill h4{
+  
+    width: 400px;
+    margin-left: 80px;
+    font-size: 30px;
+  }
+  
+  #fill-fb{
+    right: 150px;
+    display: flex;
+    flex-direction: row;
+    height: 176px;
+    margin-right: 180px;
+    margin-top: 20px;
+  }
+  
+  #fill-fb .input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  
+  }
+  #fill-fb input[name="name"]{
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher", sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  #fill-fb textarea[name="feedbackContent"]{
+    resize: none;
+    width: 350px;
+    font-family: "Philosopher", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .feedback button{
+      position: absolute;
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 70px;
+      height: 30px;
+      top: 360px;
+      cursor: pointer;
+      
+  }
+  #fill-fb button{
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: black solid 1px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.4s;
+    font-family: "Philosopher", sans-serif;
+    font-size: 30px;
+  }
+  #fill-fb button:hover{
+    background: #df8c06;
+  }
+  
+  #footer{
+    position: absolute;
+    top: 2300px;
+    width: 100%;
+    height: 400px;
+    background-color: #ccc;
+  }
+  
+  #footer-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  hr{
+    margin: 0 70px;
+  }
+  #footer-container .footer-section:first-child{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+  }
+  .footer-section:first-child .icon i{
+    margin: 10px;
+  }
+  .footer-section:first-child .icon a{
+    text-decoration: none;
+    color: #000;
+  }
+  .footer-section:first-child .icon i:hover{
+    cursor: pointer;
+  }
+  .footer-section:first-child .icon{
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .fs-header{
+    font-family:"Philosopher", sans-serif;
+    font-size: 50px;
+    margin: auto auto;
+    grid-area: header;
+  }
+  .fs-main1{
+    grid-area: main1;
+  }
+  .fs-main2{
+    grid-area: main2;
+  }
+  .fs-main3{
+    grid-area: main3;
+  }
+  .fs-footer{
+    margin: 0 auto;
+    grid-area: footer;
+  }
+  
+  .fs-main1 p, .fs-main2 p, .fs-main3 p{
+    line-height: var(--line-height-25);
+  }
+  .fs-main1,.fs-main2,.fs-main3{
+    margin-top: var(--mt-10);
+  }
+  #footer-container .footer-section:last-child{
+    display: grid;
+    grid-template-columns: 300px 300px 320px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+              "header header header"
+              "main1 main2 main3"
+              "footer footer footer";
+  }
+  
+  .footer-section h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+
