@@ -7,6 +7,11 @@ const app = express()
 const port = 3000
 
 const route = require('./routes')
+const db = require('./config/db/database')
+
+//connect to db
+db.connect();
+
 
 app.use(express.static(path.join(__dirname, 'public'))) //kích hoạt middleware để phục vụ các tệp tĩnh từ thư mục public trong express.
 
