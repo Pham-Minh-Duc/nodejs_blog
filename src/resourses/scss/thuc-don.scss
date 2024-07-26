@@ -1,0 +1,198 @@
+.title{
+    position: fixed;
+    z-index: 2000;
+    top: 9px;
+    left: 150px;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    text-align: center;
+}
+.title:hover{
+    cursor: pointer;
+    color: aliceblue;
+    transition: 0.5s;
+}
+.thuc-don{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 500px;
+}
+.thuc-don #img-bg{
+    position: absolute;
+    top: 90px;
+    // transform: translateY(10rem);
+    width: 100%;
+    height: auto;
+}
+.link{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+
+}
+.link .item-list{
+    text-align: center;
+    height: 100%;
+    font-size: 24px;
+    margin: auto auto;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: #d8b63d;
+    border-radius: 25px;
+    cursor:  pointer;
+}
+.link .item-list:hover{
+    color: aliceblue;
+    background-color: #be9501;
+    transition: 0.5s;
+}
+.link .item-list.active{
+    color: aliceblue;
+    background-color: #be9501;
+    transition: 0.5s;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    top: 170px;
+}
+.item-content{
+    display: none;
+}
+.item-content.active{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/////////////////////////////
+
+
+.container {
+    width: 100%;
+    transform: translateY(-3rem);
+    // height: 100vh;
+    display: grid;
+    // grid-template-columns: 400px 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+}
+
+.card {
+    width: 400px;
+    height: 380px;
+    padding: 4rem 3rem 0;
+    color: #fff;
+    overflow-y: hidden;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    margin: auto auto;
+}
+
+.card__img {
+    // position: absolute;
+    // top: 0;
+    // left: 150px;
+    transform: translate(6rem,-3rem)scale(1);
+    width: 230px; /* Đặt chiều rộng mới của hình ảnh */
+    height: 230px; /* Giữ tỷ lệ hình ảnh */
+}
+
+.card__data{
+
+    transform: translateY(-1rem);
+    // transform: translateY(-9rem);
+    /* text-align: center; */
+}
+
+.dishName {
+    // transform: translateY(-9rem);
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    margin-bottom: 0.5rem;
+    width: 300px;
+
+}
+
+.card__preci {
+    display: block;
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    width: 300px;
+
+}
+
+.card__description {
+    font-size: var(--small-font-size);
+    text-align: initial;
+    width: 300px;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+}
+
+.card__button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: var(--white-color);
+    border-radius: .5rem;
+    font-weight: 600;
+    transition: .2s;
+    opacity: 0;
+}
+
+.card__button:hover {
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    box-shadow: 0 18px 40px -12px rgba(242,152,12, 0.35);
+}
+
+.infor{
+    transform: translateY(1rem);
+    opacity: 0;
+}
+.card__img, 
+.card__data, 
+.dishName, 
+.card__preci, 
+.card__description {
+  transition: .5s;
+}
+
+.card:hover .card__img {
+    transform: translate(6rem,-4.5rem) scale(1);
+}
+
+.card:hover .card__data {
+    transform: translateY(-4.8rem);
+}
+
+.card:hover .dishName {
+    /* transform: translateX(-2.3rem); */
+    margin-bottom: 0;
+}
+
+.card:hover .card__preci {
+    /* transform: translateX(-5rem); */
+}
+
+.card:hover .infor,
+.card:hover .card__description, 
+.card:hover .card__button {
+  transition-delay: .2s;
+  opacity: 1;
+}

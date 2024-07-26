@@ -29,7 +29,7 @@ app.set('views', path.join(__dirname,'resourses\\views'))   // tim toi thu muc v
 // action --> Dispatcher --> Function handler
 //route
 // app.get('/trang-chu', (req, res) => {   // 2 phan, path va handle function
-//     res.render('trang-chu') // tuong tac voi view, render ra trnag-chu
+//     res.render('trang-chu') // tuong tac voi view, render ra trang-chu
 // })
 
 // routes init

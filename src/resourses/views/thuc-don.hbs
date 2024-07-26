@@ -1,0 +1,114 @@
+<div class="title">menu</div>
+<div class="thuc-don">
+  <img id="img-bg" src="/img/img/menu-bg.jpg" alt="" />
+  <div class="link">
+    <div data-food="breakfast" class="item-list active">điểm tâm sáng</div>
+    <div data-food="maindish" class="item-list">món chính</div>
+    <div data-food="dessert" class="item-list">thức uống</div>
+  </div>
+  <div class="content">
+    <div id="breakfast" class="item-content active">
+      <div class="container">
+        <div class="card">
+          <img src="/img/img/menuPage/doAn11.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/img/menuPage/doAn16.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/img/menuPage/doAn15.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/img/menuPage/doAn14.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/img/menuPage/doAn12.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/img/img/menuPage/doAn13.png" alt="" class="card__img" />
+          <div class="card__data">
+            <h1 class="dishName">Cá Ngừ Xông Khói</h1>
+            <span class="card__preci">best seller</span>
+            <p class="card__description">
+              100% nhap khau tu Nhat Ban
+            </p>
+            <a href="#" class="card__button">Order Now</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div id="maindish" class="item-content"></div>
+    <div id="dessert" class="item-content"></div>
+  </div>
+</div>
+
+
+<script>
+  var itemList = document.querySelectorAll('.item-list');
+  var itemContent = document.querySelectorAll('.item-content');
+  
+  console.log(itemContent)
+  itemList.forEach((e) => {
+    e.addEventListener('click', openTabs)
+  })
+
+
+  function openTabs(e){
+    var btn = e.currentTarget;
+    var food = btn.dataset.food;
+
+    itemList.forEach((el) => {
+      el.classList.remove('active');
+    })
+
+    itemContent.forEach((el) => {
+      el.classList.remove('active');
+    })
+
+    document.querySelector('#' + food).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>

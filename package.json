@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon --inspect src/app.js",
-    "look": "node-sass src/resourses/scss/app.scss -w src/public/css/app.css ",
+    "look": "node-sass src/resourses/scss/app.scss -w src/public/css/app.css",
+    "print": "node-sass src/resourses/scss/thuc-don.scss -w src/public/css/thuc-don.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

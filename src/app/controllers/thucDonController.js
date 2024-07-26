@@ -6,7 +6,9 @@ class thucDonController {
     }
 
     title(req,res){
-        res.send('Đây là thực đơn')
+        // res.send('Đây là thực đơn')
+        res.render('thuc-don')
+
     }
 }
 
