@@ -1,22 +1,22 @@
-const feedback = require('../models/feedback');
 
 class TrangchuController {
 
     //[GET] data in mongodb /trang-chu
 
     // cách 1
-       async index(req, res){
-        try{
-            const feedbacks = await feedback.find({})
-            res.json(feedbacks);
-            // res.render('trang-chu')
-        }
-        catch(error){
-            console.error("Error fetching feedbacks:", error);
-            res.status(400).json({ error: 'ERROR', details: error.message });
-        }
-            // res.render('trang-chu')
-        }
+    //    async index(req, res){
+    //     try{
+    //         const feedbacks = await feedback.find({})
+    //         // res.json(feedbacks);
+    //         // feedback => res.render('trang-chu')
+    //         res.render('trang-chu')
+    //     }
+    //     catch(error){
+    //         console.error("Error fetching feedbacks:", error);
+    //         res.status(400).json({ error: 'ERROR', details: error.message });
+    //     }
+    //         // res.render('trang-chu')
+    //     }
     
 
 
@@ -34,12 +34,9 @@ class TrangchuController {
 
 
 //cách 3
-// index(req, res) {
-//     feedback.find({})
-//         .then((feedback) => res.json(feedback))
-//         // .then(res.render('trang-chu'))
-//         .catch((err) => res.status(400).json({error: 'ERROR !!'}));
-// }
+index(req, res) {
+    res.render('trang-chu')
+}
 
 
 
