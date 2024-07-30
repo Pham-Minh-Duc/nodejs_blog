@@ -18,7 +18,7 @@
             <p class="card__description">
               {{this.detail}}
             </p>
-            <a href="#" class="card__button">Order Now</a>
+            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
           </div>
         </div>
         {{/each}}
@@ -38,7 +38,7 @@
             <p class="card__description">
               {{dish.detail}}
             </p>
-            <a href="#" class="card__button">Order Now</a>
+            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
           </div>
         </div>
         {{/each}}
@@ -47,75 +47,21 @@
 
 
 
-
     <div id="dessert" class="item-content">
       <div class="container">
+        {{#each orderDrink}}
          <div class="card">
-          <img src="/img/img/menuPage/nuoc1.png" alt="" class="card__img" />
+          <img src="{{this.imageOfDish}}" alt="" class="card__img" />
           <div class="card__data">
-            <h1 class="dishName">Trà sữa chân trâu</h1>
+            <h1 class="dishName">{{this.nameOfDish}}</h1>
             <span class="card__preci">best seller</span>
             <p class="card__description">
-              100% nhap khau tu Nhat Ban
+              {{this.detail}}
             </p>
-            <a href="#" class="card__button">Order Now</a>
+            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
           </div>
         </div>
-         <div class="card">
-          <img src="/img/img/menuPage/nuoc2.png" alt="" class="card__img" />
-          <div class="card__data">
-            <h1 class="dishName">Trà vải</h1>
-            <span class="card__preci">best seller</span>
-            <p class="card__description">
-              100% nhap khau tu Nhat Ban
-            </p>
-            <a href="#" class="card__button">Order Now</a>
-          </div>
-        </div>
-         <div class="card">
-          <img src="/img/img/menuPage/nuoc3.png" alt="" class="card__img" />
-          <div class="card__data">
-            <h1 class="dishName">Trà đào cam sả</h1>
-            <span class="card__preci">best seller</span>
-            <p class="card__description">
-              100% nhap khau tu Nhat Ban
-            </p>
-            <a href="#" class="card__button">Order Now</a>
-          </div>
-        </div>
-         <div class="card">
-          <img src="/img/img/menuPage/nuoc4.png" alt="" class="card__img" />
-          <div class="card__data">
-            <h1 class="dishName">Trà dâu</h1>
-            <span class="card__preci">best seller</span>
-            <p class="card__description">
-              100% nhap khau tu Nhat Ban
-            </p>
-            <a href="#" class="card__button">Order Now</a>
-          </div>
-        </div>
-         <div class="card">
-          <img src="/img/img/menuPage/nuoc5.png" alt="" class="card__img" />
-          <div class="card__data">
-            <h1 class="dishName">Cacao Sữa Dừa</h1>
-            <span class="card__preci">best seller</span>
-            <p class="card__description">
-              100% nhap khau tu Nhat Ban
-            </p>
-            <a href="#" class="card__button">Order Now</a>
-          </div>
-        </div>
-         <div class="card">
-          <img src="/img/img/menuPage/nuoc6.png" alt="" class="card__img" />
-          <div class="card__data">
-            <h1 class="dishName">Trà đào hoa đậu biếc</h1>
-            <span class="card__preci">best seller</span>
-            <p class="card__description">
-              100% nhap khau tu Nhat Ban
-            </p>
-            <a href="#" class="card__button">Order Now</a>
-          </div>
-        </div>
+         {{/each}}
       </div>
     </div>
   </div>

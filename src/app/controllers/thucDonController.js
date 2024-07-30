@@ -1,5 +1,6 @@
 const Maindish = require('../models/mainDish');
 const Breakfast = require('../models/breakfast');
+const Drink = require('../models/drink');
 
 const { mutipleMongooseToObject } = require('../../ultil/mongoose');
 
@@ -11,12 +12,15 @@ class thucDonController {
     orders(req, res, next){
         Promise.all([
             Breakfast.find({}),
-            Maindish.find({})
+            Maindish.find({}),
+            Drink.find({})
+
         ])
-        .then(([ordersBreakfast, ordersMaindish]) => {
+        .then(([ordersBreakfast, ordersMaindish, orderDrink]) => {
             res.render('thuc-don',{ 
                 ordersBreakfast: mutipleMongooseToObject(ordersBreakfast), 
-                ordersMaindish: mutipleMongooseToObject(ordersMaindish)
+                ordersMaindish: mutipleMongooseToObject(ordersMaindish),
+                orderDrink: mutipleMongooseToObject(orderDrink)
             });
         })
         .catch(next);
@@ -25,9 +29,9 @@ class thucDonController {
 
 
 
-    title(req,res){
-        // res.send('Đây là thực đơn')
-        res.render('thuc-don');
+    orderSum(req,res){
+        res.send('Đây là thực đơn + ' + req.params.slug)
+        // res.render('thuc-don');
 
     }
 }
