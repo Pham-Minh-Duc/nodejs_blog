@@ -5,7 +5,7 @@ const router = express.Router();
 
 const thucDonController = require('../app/controllers/thucDonController');
 
-router.use('/:slug',thucDonController.orderSum);
+router.use('/dat-hang',thucDonController.orderSum);
 router.use('/', thucDonController.orders);
 
 

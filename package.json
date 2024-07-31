@@ -7,6 +7,7 @@
     "start": "nodemon --inspect src/app.js",
     "look": "node-sass src/resourses/scss/app.scss -w src/public/css/app.css",
     "print": "node-sass src/resourses/scss/thuc-don.scss -w src/public/css/thuc-don.css",
+    "printdh": "node-sass src/resourses/scss/dat-hang.scss -w src/public/css/dat-hang.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

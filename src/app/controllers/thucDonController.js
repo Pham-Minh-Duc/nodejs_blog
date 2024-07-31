@@ -30,8 +30,8 @@ class thucDonController {
 
 
     orderSum(req,res){
-        res.send('Đây là thực đơn + ' + req.params.slug)
-        // res.render('thuc-don');
+        // res.send('Đây là thực đơn + ' + req.params.slug)
+        res.render('dat-hang');
 
     }
 }
