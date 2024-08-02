@@ -216,3 +216,30 @@
   transition-delay: .2s;
   opacity: 1;
 }
+
+.theme{
+    position: absolute;
+    top: 1200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#img1{
+    z-index: 300;
+}
+#bgImg1{
+    // background-color: #c2c800;
+    position: absolute;
+    margin-left: 10px;
+    border-radius: 10% 30% 50% 90%;
+    z-index: 2;
+    width: 1000px;
+}
+#bgImg2{
+    // background-color: #c2c800;
+    border-radius: 50% 90% 10% 30%;
+    float: right;
+}
+#bgImg2 img{
+    float: right;
+}
