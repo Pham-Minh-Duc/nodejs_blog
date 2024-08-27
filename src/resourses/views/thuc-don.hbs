@@ -40,7 +40,7 @@
             <p class="card__description">
               {{dish.detail}}
             </p>
-            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
+            <a href=" " class="card__button">{{this.price}}</a>
           </div>
         </div>
         {{/each}}
@@ -56,13 +56,13 @@
           <img src="{{this.imageOfDish}}" alt="" class="card__img" />
           <div class="card__data">
             <h1 class="dishName">{{this.nameOfDish}}</h1>
-            <span class="card__preci">best seller</span>
+            <span class="card__preci">{{this.status}}</span>
             <p class="card__description">
               {{this.detail}}
             </p>
-            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
+            <a href=" " class="card__button">{{this.price}}</a>
           </div>
-        </div>
+         </div>
          {{/each}}
       </div>
     </div>
