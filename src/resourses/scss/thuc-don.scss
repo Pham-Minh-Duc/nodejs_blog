@@ -221,27 +221,11 @@
 
 .theme{
     position: absolute;
-    top: 1200px;
+    top: 1125px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 1200px;
+    background-color: #f4f44e;
 }
-#img1{
-    z-index: 300;
-}
-#bgImg1{
-    // background-color: #c2c800;
-    position: absolute;
-    margin-left: 10px;
-    border-radius: 10% 30% 50% 90%;
-    z-index: 2;
-    width: 1000px;
-}
-#bgImg2{
-    // background-color: #c2c800;
-    border-radius: 50% 90% 10% 30%;
-    float: right;
-}
-#bgImg2 img{
-    float: right;
-}
+

@@ -16,11 +16,11 @@
           <img src="{{this.imageOfDish}}" alt="{{this.nameOfDish}}" class="card__img" />
           <div class="card__data">
             <h1 class="dishName">{{this.nameOfDish}}</h1>
-            <span class="card__preci">best seller</span>
+            <span class="card__preci">{{this.status}}</span>
             <p class="card__description">
               {{this.detail}}
             </p>
-            <a href="/thuc-don/{{this.slug}}" class="card__button">Order Now</a>
+            <a href=" " class="card__button">{{this.price}}</a>
           </div>
         </div>
         {{/each}}
@@ -36,7 +36,7 @@
           <img src="{{this.imageOfDish}}" alt="" class="card__img" />
           <div class="card__data">
             <h1 class="dishName">{{this.nameOfDish}}</h1>
-            <span class="card__preci">best seller</span>
+            <span class="card__preci">{{this.status}}</span>
             <p class="card__description">
               {{dish.detail}}
             </p>
@@ -60,7 +60,7 @@
             <p class="card__description">
               {{this.detail}}
             </p>
-            <a href=" " class="card__button">{{this.price}}</a>
+            <a class="card__button">{{this.price}}</a>
           </div>
          </div>
          {{/each}}
@@ -71,14 +71,7 @@
 </div>
 
 <div class="theme">
-  <div id="theme1">
-    <img id="bgImg1"src="/img/img/imageList/1.jpg" alt=""> 
-    <img id="img1" src="/img/img/menuPage/theme1.png" alt="">
-  </div>
-  <div id="theme2">
-    <img id="bgImg2" src="/img/img/imageList/2.jpg" alt="">
-    <img id="" src="/img/img/menuPage/theme2.png" alt="">
-  </div>
+  
 </div>
 
 
